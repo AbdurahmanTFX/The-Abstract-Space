@@ -1,0 +1,11 @@
+# Hashes of file build rules.
+6aa915e03912af0a9fa45f4203fdac71 CMakeFiles/raylib-populate
+32e74919addcb9d5c3b48117fe96a660 CMakeFiles/raylib-populate-complete
+49c002535024670668e74592671d84c0 raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-build
+1c5e60db2bb983aff9ed925fc476b016 raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-configure
+fe3fb01d3138bf885e9ade8d1dc57fcc raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-download
+b5769dc9eaa94a9b23d44df645bbc539 raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-install
+c3edb343b9b77715fa90d2ab6667865b raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-mkdir
+265929990805ddb3f3e2ab0fca27b2b8 raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-patch
+58b5adde75ef7989ea9f8efa6580d7d7 raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-test
+c94243348cef358aa33142358c70e600 raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-update
