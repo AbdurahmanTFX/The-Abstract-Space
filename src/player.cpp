@@ -38,27 +38,27 @@ void player::updateTwo(std::vector <std::pair <EnvItem, int>> obstacles, float d
     for(int i = 0; i < static_cast<int>(obstacles.size()); i++){
         if(CheckCollisionRecs(this->playerHitBox, obstacles[i].first.rect) && obstacles[i].second){
 
-            if(this->playerHitBox.y > obstacles[i].first.rect.y 
-            && this->playerHitBox.y < obstacles[i].first.rect.y + obstacles[i].first.rect.height &&
+            if(this->playerHitBox.y >= obstacles[i].first.rect.y 
+            && this->playerHitBox.y <= obstacles[i].first.rect.y + obstacles[i].first.rect.height &&
             (IsKeyDown('S') || IsKeyPressed('S')) 
             && ((IsKeyDown('A') || IsKeyPressed('A')))){
                 playerHitBox.x = obstacles[i].first.rect.x + obstacles[i].first.rect.width;
             }
-            else if(this->playerHitBox.y + this->playerHitBox.height > obstacles[i].first.rect.y 
-            && this->playerHitBox.y + this->playerHitBox.height < obstacles[i].first.rect.y + obstacles[i].first.rect.height &&
+            else if(this->playerHitBox.y + this->playerHitBox.height >= obstacles[i].first.rect.y 
+            && this->playerHitBox.y + this->playerHitBox.height <= obstacles[i].first.rect.y + obstacles[i].first.rect.height &&
             (IsKeyDown('W') || IsKeyPressed('W')) 
             && ((IsKeyDown('A') || IsKeyPressed('A')))){
                 playerHitBox.x = obstacles[i].first.rect.x + obstacles[i].first.rect.width;
             }
 
-            else if(this->playerHitBox.y > obstacles[i].first.rect.y 
-            && this->playerHitBox.y < obstacles[i].first.rect.y + obstacles[i].first.rect.height &&
+            else if(this->playerHitBox.y >= obstacles[i].first.rect.y 
+            && this->playerHitBox.y <= obstacles[i].first.rect.y + obstacles[i].first.rect.height &&
             (IsKeyDown('S') || IsKeyPressed('S')) 
             && ((IsKeyDown('D') || IsKeyPressed('D')))){
                 playerHitBox.x = obstacles[i].first.rect.x - playerHitBox.width;
             }
-            else if(this->playerHitBox.y + this->playerHitBox.height > obstacles[i].first.rect.y 
-            && this->playerHitBox.y + this->playerHitBox.height < obstacles[i].first.rect.y + obstacles[i].first.rect.height &&
+            else if(this->playerHitBox.y + this->playerHitBox.height >= obstacles[i].first.rect.y 
+            && this->playerHitBox.y + this->playerHitBox.height <= obstacles[i].first.rect.y + obstacles[i].first.rect.height &&
             (IsKeyDown('W') || IsKeyPressed('W')) 
             && ((IsKeyDown('D') || IsKeyPressed('D')))){
                 playerHitBox.x = obstacles[i].first.rect.x - playerHitBox.width;
@@ -69,27 +69,27 @@ void player::updateTwo(std::vector <std::pair <EnvItem, int>> obstacles, float d
 
 ///////////////////////////////////////////////////////
 
-            else if(this->playerHitBox.x > obstacles[i].first.rect.x 
-            && this->playerHitBox.x < obstacles[i].first.rect.x + obstacles[i].first.rect.width &&
+            else if(this->playerHitBox.x >= obstacles[i].first.rect.x 
+            && this->playerHitBox.x <= obstacles[i].first.rect.x + obstacles[i].first.rect.width &&
             (IsKeyDown('S') || IsKeyPressed('S')) 
             && ((IsKeyDown('A') || IsKeyPressed('A')))){
                 playerHitBox.y = obstacles[i].first.rect.y - playerHitBox.height;
             }
-            else if(this->playerHitBox.x + this->playerHitBox.width > obstacles[i].first.rect.x 
-            && this->playerHitBox.x + this->playerHitBox.width < obstacles[i].first.rect.x + obstacles[i].first.rect.width &&
+            else if(this->playerHitBox.x + this->playerHitBox.width >= obstacles[i].first.rect.x 
+            && this->playerHitBox.x + this->playerHitBox.width <= obstacles[i].first.rect.x + obstacles[i].first.rect.width &&
             (IsKeyDown('W') || IsKeyPressed('W')) 
             && ((IsKeyDown('A') || IsKeyPressed('A')))){
                 playerHitBox.y = obstacles[i].first.rect.y + obstacles[i].first.rect.height;
             }
 
-            else if(this->playerHitBox.x > obstacles[i].first.rect.x 
-            && this->playerHitBox.x < obstacles[i].first.rect.x + obstacles[i].first.rect.width &&
+            else if(this->playerHitBox.x >= obstacles[i].first.rect.x 
+            && this->playerHitBox.x <= obstacles[i].first.rect.x + obstacles[i].first.rect.width &&
             (IsKeyDown('S') || IsKeyPressed('S')) 
             && ((IsKeyDown('D') || IsKeyPressed('D')))){
                 playerHitBox.y = obstacles[i].first.rect.y - playerHitBox.height;
             }
-            else if(this->playerHitBox.x + this->playerHitBox.width > obstacles[i].first.rect.x
-            && this->playerHitBox.x + this->playerHitBox.width < obstacles[i].first.rect.x + obstacles[i].first.rect.width &&
+            else if(this->playerHitBox.x + this->playerHitBox.width >= obstacles[i].first.rect.x
+            && this->playerHitBox.x + this->playerHitBox.width <= obstacles[i].first.rect.x + obstacles[i].first.rect.width &&
             (IsKeyDown('W') || IsKeyPressed('W')) 
             && ((IsKeyDown('D') || IsKeyPressed('D')))){
                 playerHitBox.y = obstacles[i].first.rect.y + obstacles[i].first.rect.height;
@@ -103,14 +103,14 @@ void player::updateTwo(std::vector <std::pair <EnvItem, int>> obstacles, float d
                 //this->upSide = false;
             }
             else if((this->dir == this->playerdir::down || IsKeyDown('S')) && !IsKeyDown('A') && !IsKeyDown('D') &&
-            playerHitBox.y < obstacles[i].first.rect.y ){
+            playerHitBox.y <= obstacles[i].first.rect.y ){
                 playerHitBox.y = obstacles[i].first.rect.y - playerHitBox.height;
                 //this->downSide = false;
             }
             
 
             else if((this->dir == this->playerdir::right || IsKeyDown('D')) &&
-            playerHitBox.x < obstacles[i].first.rect.x){
+            playerHitBox.x <= obstacles[i].first.rect.x){
                 playerHitBox.x = obstacles[i].first.rect.x - playerHitBox.width;
                 //this->rightSide = false;
             }
