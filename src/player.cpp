@@ -38,97 +38,136 @@ void player::updateTwo(std::vector <std::pair <EnvItem, int>> obstacles, float d
     for(int i = 0; i < static_cast<int>(obstacles.size()); i++){
         if(CheckCollisionRecs(this->playerHitBox, obstacles[i].first.rect) && obstacles[i].second){
 
-            if(this->playerHitBox.y >= obstacles[i].first.rect.y 
-            && this->playerHitBox.y <= obstacles[i].first.rect.y + obstacles[i].first.rect.height &&
-            (IsKeyDown('S') || IsKeyPressed('S')) 
-            && ((IsKeyDown('A') || IsKeyPressed('A')))){
-                playerHitBox.x = obstacles[i].first.rect.x + obstacles[i].first.rect.width;
-            }
-            else if(this->playerHitBox.y + this->playerHitBox.height >= obstacles[i].first.rect.y 
-            && this->playerHitBox.y + this->playerHitBox.height <= obstacles[i].first.rect.y + obstacles[i].first.rect.height &&
-            (IsKeyDown('W') || IsKeyPressed('W')) 
-            && ((IsKeyDown('A') || IsKeyPressed('A')))){
-                playerHitBox.x = obstacles[i].first.rect.x + obstacles[i].first.rect.width;
-            }
+//             if(this->playerHitBox.y >= obstacles[i].first.rect.y 
+//             && this->playerHitBox.y <= obstacles[i].first.rect.y + obstacles[i].first.rect.height &&
+//             (IsKeyDown('S') || IsKeyPressed('S')) 
+//             && ((IsKeyDown('A') || IsKeyPressed('A')))){
+//                 playerHitBox.x = obstacles[i].first.rect.x + obstacles[i].first.rect.width;
+//             }
+//             else if(this->playerHitBox.y + this->playerHitBox.height >= obstacles[i].first.rect.y 
+//             && this->playerHitBox.y + this->playerHitBox.height <= obstacles[i].first.rect.y + obstacles[i].first.rect.height &&
+//             (IsKeyDown('W') || IsKeyPressed('W')) 
+//             && ((IsKeyDown('A') || IsKeyPressed('A')))){
+//                 playerHitBox.x = obstacles[i].first.rect.x + obstacles[i].first.rect.width;
+//             }
 
-            else if(this->playerHitBox.y >= obstacles[i].first.rect.y 
-            && this->playerHitBox.y <= obstacles[i].first.rect.y + obstacles[i].first.rect.height &&
-            (IsKeyDown('S') || IsKeyPressed('S')) 
-            && ((IsKeyDown('D') || IsKeyPressed('D')))){
-                playerHitBox.x = obstacles[i].first.rect.x - playerHitBox.width;
-            }
-            else if(this->playerHitBox.y + this->playerHitBox.height >= obstacles[i].first.rect.y 
-            && this->playerHitBox.y + this->playerHitBox.height <= obstacles[i].first.rect.y + obstacles[i].first.rect.height &&
-            (IsKeyDown('W') || IsKeyPressed('W')) 
-            && ((IsKeyDown('D') || IsKeyPressed('D')))){
-                playerHitBox.x = obstacles[i].first.rect.x - playerHitBox.width;
-            }
-////////////////////////////////////////////////////////
+//             else if(this->playerHitBox.y >= obstacles[i].first.rect.y 
+//             && this->playerHitBox.y <= obstacles[i].first.rect.y + obstacles[i].first.rect.height &&
+//             (IsKeyDown('S') || IsKeyPressed('S')) 
+//             && ((IsKeyDown('D') || IsKeyPressed('D')))){
+//                 playerHitBox.x = obstacles[i].first.rect.x - playerHitBox.width;
+//             }
+//             else if(this->playerHitBox.y + this->playerHitBox.height >= obstacles[i].first.rect.y 
+//             && this->playerHitBox.y + this->playerHitBox.height <= obstacles[i].first.rect.y + obstacles[i].first.rect.height &&
+//             (IsKeyDown('W') || IsKeyPressed('W')) 
+//             && ((IsKeyDown('D') || IsKeyPressed('D')))){
+//                 playerHitBox.x = obstacles[i].first.rect.x - playerHitBox.width;
+//             }
+// ////////////////////////////////////////////////////////
 
             
 
-///////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////
 
-            else if(this->playerHitBox.x >= obstacles[i].first.rect.x 
-            && this->playerHitBox.x <= obstacles[i].first.rect.x + obstacles[i].first.rect.width &&
-            (IsKeyDown('S') || IsKeyPressed('S')) 
-            && ((IsKeyDown('A') || IsKeyPressed('A')))){
-                playerHitBox.y = obstacles[i].first.rect.y - playerHitBox.height;
-            }
-            else if(this->playerHitBox.x + this->playerHitBox.width >= obstacles[i].first.rect.x 
-            && this->playerHitBox.x + this->playerHitBox.width <= obstacles[i].first.rect.x + obstacles[i].first.rect.width &&
-            (IsKeyDown('W') || IsKeyPressed('W')) 
-            && ((IsKeyDown('A') || IsKeyPressed('A')))){
+//             else if(this->playerHitBox.x >= obstacles[i].first.rect.x 
+//             && this->playerHitBox.x <= obstacles[i].first.rect.x + obstacles[i].first.rect.width &&
+//             (IsKeyDown('S') || IsKeyPressed('S')) 
+//             && ((IsKeyDown('A') || IsKeyPressed('A')))){
+//                 playerHitBox.y = obstacles[i].first.rect.y - playerHitBox.height;
+//             }
+//             else if(this->playerHitBox.x + this->playerHitBox.width >= obstacles[i].first.rect.x 
+//             && this->playerHitBox.x + this->playerHitBox.width <= obstacles[i].first.rect.x + obstacles[i].first.rect.width &&
+//             (IsKeyDown('W') || IsKeyPressed('W')) 
+//             && ((IsKeyDown('A') || IsKeyPressed('A')))){
+//                 playerHitBox.y = obstacles[i].first.rect.y + obstacles[i].first.rect.height;
+//             }
+
+//             else if(this->playerHitBox.x >= obstacles[i].first.rect.x 
+//             && this->playerHitBox.x <= obstacles[i].first.rect.x + obstacles[i].first.rect.width &&
+//             (IsKeyDown('S') || IsKeyPressed('S')) 
+//             && ((IsKeyDown('D') || IsKeyPressed('D')))){
+//                 playerHitBox.y = obstacles[i].first.rect.y - playerHitBox.height;
+//             }
+//             else if(this->playerHitBox.x + this->playerHitBox.width >= obstacles[i].first.rect.x
+//             && this->playerHitBox.x + this->playerHitBox.width <= obstacles[i].first.rect.x + obstacles[i].first.rect.width &&
+//             (IsKeyDown('W') || IsKeyPressed('W')) 
+//             && ((IsKeyDown('D') || IsKeyPressed('D')))){
+//                 playerHitBox.y = obstacles[i].first.rect.y + obstacles[i].first.rect.height;
+//             }
+
+// /////////////////////////////////////////////
+
+//             else if((this->dir == this->playerdir::up || IsKeyDown('W')) && !IsKeyDown('A') && !IsKeyDown('D')  &&
+//             playerHitBox.y + playerHitBox.height > obstacles[i].first.rect.y + obstacles[i].first.rect.height){
+//                 playerHitBox.y = obstacles[i].first.rect.y + obstacles[i].first.rect.height;
+//                 //this->upSide = false;
+//             }
+//             else if((this->dir == this->playerdir::down || IsKeyDown('S')) && !IsKeyDown('A') && !IsKeyDown('D') &&
+//             playerHitBox.y <= obstacles[i].first.rect.y ){
+//                 playerHitBox.y = obstacles[i].first.rect.y - playerHitBox.height;
+//                 //this->downSide = false;
+//             }
+            
+
+//             else if((this->dir == this->playerdir::right || IsKeyDown('D')) &&
+//             playerHitBox.x <= obstacles[i].first.rect.x){
+//                 playerHitBox.x = obstacles[i].first.rect.x - playerHitBox.width;
+//                 //this->rightSide = false;
+//             }
+//             else if((this->dir == this->playerdir::left || IsKeyDown('A')) &&
+//             playerHitBox.x + playerHitBox.width > obstacles[i].first.rect.x + obstacles[i].first.rect.width){
+//                 playerHitBox.x = obstacles[i].first.rect.x + obstacles[i].first.rect.width;
+//                 //this->leftSide = false;
+//             }
+            
+            
+//         }
+//         else
+//         {
+//             this->rightSide = true;
+//             this->leftSide = true;
+//             this->upSide = true;
+//             this->downSide = true;
+//         }
+
+            if(playerHitBox.y > obstacles[i].first.rect.y  
+            && playerHitBox.y < obstacles[i].first.rect.y + obstacles[i].first.rect.height
+            && playerHitBox.x + playerHitBox.width > obstacles[i].first.rect.x 
+            && playerHitBox.x < obstacles[i].first.rect.x + obstacles[i].first.rect.width
+             )
+            {
                 playerHitBox.y = obstacles[i].first.rect.y + obstacles[i].first.rect.height;
             }
 
-            else if(this->playerHitBox.x >= obstacles[i].first.rect.x 
-            && this->playerHitBox.x <= obstacles[i].first.rect.x + obstacles[i].first.rect.width &&
-            (IsKeyDown('S') || IsKeyPressed('S')) 
-            && ((IsKeyDown('D') || IsKeyPressed('D')))){
-                playerHitBox.y = obstacles[i].first.rect.y - playerHitBox.height;
-            }
-            else if(this->playerHitBox.x + this->playerHitBox.width >= obstacles[i].first.rect.x
-            && this->playerHitBox.x + this->playerHitBox.width <= obstacles[i].first.rect.x + obstacles[i].first.rect.width &&
-            (IsKeyDown('W') || IsKeyPressed('W')) 
-            && ((IsKeyDown('D') || IsKeyPressed('D')))){
-                playerHitBox.y = obstacles[i].first.rect.y + obstacles[i].first.rect.height;
-            }
-
-/////////////////////////////////////////////
-
-            else if((this->dir == this->playerdir::up || IsKeyDown('W')) && !IsKeyDown('A') && !IsKeyDown('D')  &&
-            playerHitBox.y + playerHitBox.height > obstacles[i].first.rect.y + obstacles[i].first.rect.height){
-                playerHitBox.y = obstacles[i].first.rect.y + obstacles[i].first.rect.height;
-                //this->upSide = false;
-            }
-            else if((this->dir == this->playerdir::down || IsKeyDown('S')) && !IsKeyDown('A') && !IsKeyDown('D') &&
-            playerHitBox.y <= obstacles[i].first.rect.y ){
-                playerHitBox.y = obstacles[i].first.rect.y - playerHitBox.height;
-                //this->downSide = false;
-            }
+            else if(playerHitBox.y + playerHitBox.height > obstacles[i].first.rect.y  
+            && playerHitBox.y + playerHitBox.height < obstacles[i].first.rect.y + obstacles[i].first.rect.height
+            && playerHitBox.x + playerHitBox.width > obstacles[i].first.rect.x 
+            && playerHitBox.x < obstacles[i].first.rect.x + obstacles[i].first.rect.width
             
-
-            else if((this->dir == this->playerdir::right || IsKeyDown('D')) &&
-            playerHitBox.x <= obstacles[i].first.rect.x){
-                playerHitBox.x = obstacles[i].first.rect.x - playerHitBox.width;
-                //this->rightSide = false;
+            ){
+                playerHitBox.y = obstacles[i].first.rect.y - playerHitBox.height;
             }
-            else if((this->dir == this->playerdir::left || IsKeyDown('A')) &&
-            playerHitBox.x + playerHitBox.width > obstacles[i].first.rect.x + obstacles[i].first.rect.width){
+
+            else if(playerHitBox.x > obstacles[i].first.rect.x 
+            && playerHitBox.x < obstacles[i].first.rect.x + obstacles[i].first.rect.width
+            && playerHitBox.y + playerHitBox.height > obstacles[i].first.rect.y 
+            && playerHitBox.y < obstacles[i].first.rect.y + obstacles[i].first.rect.height
+            )
+            {
                 playerHitBox.x = obstacles[i].first.rect.x + obstacles[i].first.rect.width;
-                //this->leftSide = false;
             }
+
+            else if(playerHitBox.x + playerHitBox.width > obstacles[i].first.rect.x 
+            && playerHitBox.x + playerHitBox.width < obstacles[i].first.rect.x + obstacles[i].first.rect.width
+            && playerHitBox.y + playerHitBox.height > obstacles[i].first.rect.y 
+            && playerHitBox.y < obstacles[i].first.rect.y + obstacles[i].first.rect.height
+            )
+            {
+                playerHitBox.x = obstacles[i].first.rect.x - playerHitBox.width;
+            }
+
             
-            
-        }
-        else
-        {
-            this->rightSide = true;
-            this->leftSide = true;
-            this->upSide = true;
-            this->downSide = true;
-        }
+    }
     }
     
 

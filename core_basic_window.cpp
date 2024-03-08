@@ -39,8 +39,15 @@ int main()
     temp2.first.color = GREEN;
     temp2.second = 1;
 
+    std::pair <EnvItem, int> temp3;
+    temp3.first.rect = {800, 250, 50, 10};
+    temp3.first.blocking = true;
+    temp3.first.color = BROWN;
+    temp3.second = 1;
+
     obstacles.push_back(temp);
     obstacles.push_back(temp2);
+    obstacles.push_back(temp3);
     float deltaTime = GetFrameTime();
     char c = static_cast<char>(100);
 #if defined(PLATFORM_WEB)
