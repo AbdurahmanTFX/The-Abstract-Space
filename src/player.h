@@ -10,11 +10,10 @@ class player{
         int speed = 200;
     public:
         enum playerdir{
-            right, left, up, down
+            right, left, up, down, none
         }dir = playerdir::up;
         player(const Rectangle &rec);
         void setSpeed(const int &speed);
-        void update(const std::vector <Rectangle> &obstacles);
         Rectangle GetRec();
-        void updateTwo(std::vector <std::pair <EnvItem, int>> obstacles, float delta);
+        void update(std::vector <std::pair <EnvItem, int>> obstacles, float delta);
 };
