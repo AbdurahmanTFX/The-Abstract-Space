@@ -54,12 +54,12 @@ int main()
     emscripten_set_main_loop(UpdateDrawFrame, 0, 1);
 #else
 
-    SetTargetFPS(60);
+    SetTargetFPS(200);
 
     while (!WindowShouldClose())
     {
         deltaTime = GetFrameTime();
-        plr.updateTwo(obstacles, deltaTime);
+        plr.update(obstacles, deltaTime);
 
         BeginDrawing();
 

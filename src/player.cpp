@@ -14,24 +14,23 @@ Rectangle player::GetRec(){
     return this->playerHitBox;
 }
 
-
 void player::update(std::vector <std::pair <EnvItem, int>> obstacles, float delta)
 {
     switch(GetKeyPressed()){
         case 'W':
-            this->dir = this->playerdir::up;
+            this->dir = playerdir::TOP;
             break;
 
         case 'S':
-            this->dir = this->playerdir::down;
+            this->dir = playerdir::BOTTOM;
             break;
 
         case 'A':
-            this->dir = this->playerdir::left;
+            this->dir = playerdir::LEFT;
             break;
 
         case 'D':
-            this->dir = this->playerdir::right;
+            this->dir = playerdir::RIGHT;
             break;
     }
 
@@ -45,7 +44,7 @@ void player::update(std::vector <std::pair <EnvItem, int>> obstacles, float delt
                 }
                 else{
                     playerHitBox.y = obstacles[i].first.rect.y + obstacles[i].first.rect.height;
-                    this->upSide = false;
+                    this->RectSideCollision = playerdir::TOP;
                 }
             }
 
@@ -57,7 +56,7 @@ void player::update(std::vector <std::pair <EnvItem, int>> obstacles, float delt
                 }
                 else{
                     playerHitBox.y = obstacles[i].first.rect.y - playerHitBox.height;
-                    this->downSide = false;
+                    this->RectSideCollision = playerdir::BOTTOM;
                 }
             }
 
@@ -69,7 +68,7 @@ void player::update(std::vector <std::pair <EnvItem, int>> obstacles, float delt
                 }
                 else{
                     playerHitBox.x = obstacles[i].first.rect.x + obstacles[i].first.rect.width;
-                    this->leftSide = false;
+                    this->RectSideCollision = playerdir::LEFT;
                 }
             }
 
@@ -81,42 +80,45 @@ void player::update(std::vector <std::pair <EnvItem, int>> obstacles, float delt
                 }
                 else{
                     playerHitBox.x = obstacles[i].first.rect.x - playerHitBox.width;
-                    this->rightSide = false;
+                    this->RectSideCollision = playerdir::RIGHT;
                 }
             }
         }
 
         else {
-            this->rightSide = true;
-            this->leftSide = true;
-            this->upSide = true;
-            this->downSide = true;
-            this->speed = 200;
+            this->RectSideCollision = playerdir::NONE;
+        }
         }
 
-    }
-    
-
     if((IsKeyDown('D') || IsKeyPressed('D')) && (IsKeyDown('A') || IsKeyPressed('A'))){
-            if(this->dir == this->playerdir::right && this->rightSide)this->playerHitBox.x += this->speed*delta;
-            else if(this->dir == this->playerdir::left && this->leftSide)this->playerHitBox.x -= this->speed*delta;
+            if(this->dir == playerdir::RIGHT && this->RectSideCollision != playerdir::RIGHT)
+                this->playerHitBox.x += this->speed*delta;
+            else if(this->dir == playerdir::LEFT && this->RectSideCollision != playerdir::LEFT)
+                this->playerHitBox.x -= speed*delta;
     }
     else if ((IsKeyDown('A') || IsKeyPressed('A')) && (!IsKeyDown('D') || !IsKeyPressed('D'))){
-     if(this->leftSide)this->playerHitBox.x -= this->speed*delta;
+     if(this->RectSideCollision != playerdir::LEFT)this->playerHitBox.x -= this->speed*delta;
     }
     else if ((IsKeyDown('D') || IsKeyPressed('D')) && (!IsKeyDown('A') || !IsKeyPressed('A'))){
-     if(this->rightSide)this->playerHitBox.x += this->speed*delta;
+     if(this->RectSideCollision != playerdir::RIGHT)this->playerHitBox.x += this->speed*delta;
     }
 
 
     if ((IsKeyDown('W') || IsKeyPressed('W')) && (IsKeyDown('S') || IsKeyPressed('S'))){
-        if(this->dir == this->playerdir::up && this->upSide) this->playerHitBox.y -= this->speed*delta;
-        else if(this->dir == this->playerdir::down && this->downSide) this->playerHitBox.y += this->speed*delta;
+        if(this->dir == playerdir::TOP && this->RectSideCollision != playerdir::TOP)
+            this->playerHitBox.y -= this->speed*delta;
+        else if(this->dir == playerdir::BOTTOM && this->RectSideCollision != playerdir::BOTTOM)
+            this->playerHitBox.y += this->speed*delta;
     }
     else if ((IsKeyDown('S') || IsKeyPressed('S')) && (!IsKeyDown('W') || !IsKeyPressed('W'))){
-        if(this->downSide)this->playerHitBox.y += this->speed*delta;
+        if(this->RectSideCollision != playerdir::BOTTOM)this->playerHitBox.y += this->speed*delta;
     }
     else if((IsKeyDown('W') || IsKeyPressed('W')) && (!IsKeyDown('S') || !IsKeyPressed('S'))){
-        if(this->upSide)this->playerHitBox.y -= this->speed*delta;
+        if(this->RectSideCollision != playerdir::TOP)this->playerHitBox.y -= this->speed*delta;
+    }
+
+    if(IsKeyPressed('Q')){
+        if(this->speed != 800)this->speed = 800;
+        else this->speed = 300;
     }
 }
