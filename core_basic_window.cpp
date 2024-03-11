@@ -15,7 +15,7 @@
 
 int main()
 {
-    InitWindow(NULL, NULL, "raylib [core] example - basic window");
+    InitWindow(0, 0, "raylib [core] example - basic window");
     SetWindowState(FLAG_WINDOW_RESIZABLE);
     int monitor = GetCurrentMonitor();
     int screenWidth = GetMonitorWidth(monitor);

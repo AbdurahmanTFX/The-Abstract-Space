@@ -1,7 +1,7 @@
 #pragma once
 #include "raylib.h"
 
-typedef struct EnvItem{
+struct EnvItem{
     Rectangle rect;
     bool blocking;
     Color color;
