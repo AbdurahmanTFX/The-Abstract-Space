@@ -232,29 +232,29 @@ update_mappings/fast:
 	$(MAKE) $(MAKESILENT) -f _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\update_mappings.dir\build.make _deps/raylib-build/raylib/external/glfw/src/CMakeFiles/update_mappings.dir/build
 .PHONY : update_mappings/fast
 
-core_basic_window.obj: core_basic_window.cpp.obj
-.PHONY : core_basic_window.obj
+main.obj: main.cpp.obj
+.PHONY : main.obj
 
 # target to build an object file
-core_basic_window.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\example.dir\build.make CMakeFiles/example.dir/core_basic_window.cpp.obj
-.PHONY : core_basic_window.cpp.obj
+main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\example.dir\build.make CMakeFiles/example.dir/main.cpp.obj
+.PHONY : main.cpp.obj
 
-core_basic_window.i: core_basic_window.cpp.i
-.PHONY : core_basic_window.i
+main.i: main.cpp.i
+.PHONY : main.i
 
 # target to preprocess a source file
-core_basic_window.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\example.dir\build.make CMakeFiles/example.dir/core_basic_window.cpp.i
-.PHONY : core_basic_window.cpp.i
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\example.dir\build.make CMakeFiles/example.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-core_basic_window.s: core_basic_window.cpp.s
-.PHONY : core_basic_window.s
+main.s: main.cpp.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-core_basic_window.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\example.dir\build.make CMakeFiles/example.dir/core_basic_window.cpp.s
-.PHONY : core_basic_window.cpp.s
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\example.dir\build.make CMakeFiles/example.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 src/EnvItem.obj: src/EnvItem.cpp.obj
 .PHONY : src/EnvItem.obj
@@ -280,29 +280,29 @@ src/EnvItem.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\example.dir\build.make CMakeFiles/example.dir/src/EnvItem.cpp.s
 .PHONY : src/EnvItem.cpp.s
 
-src/StartLvl.obj: src/StartLvl.cpp.obj
-.PHONY : src/StartLvl.obj
+src/Levels.obj: src/Levels.cpp.obj
+.PHONY : src/Levels.obj
 
 # target to build an object file
-src/StartLvl.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\example.dir\build.make CMakeFiles/example.dir/src/StartLvl.cpp.obj
-.PHONY : src/StartLvl.cpp.obj
+src/Levels.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\example.dir\build.make CMakeFiles/example.dir/src/Levels.cpp.obj
+.PHONY : src/Levels.cpp.obj
 
-src/StartLvl.i: src/StartLvl.cpp.i
-.PHONY : src/StartLvl.i
+src/Levels.i: src/Levels.cpp.i
+.PHONY : src/Levels.i
 
 # target to preprocess a source file
-src/StartLvl.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\example.dir\build.make CMakeFiles/example.dir/src/StartLvl.cpp.i
-.PHONY : src/StartLvl.cpp.i
+src/Levels.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\example.dir\build.make CMakeFiles/example.dir/src/Levels.cpp.i
+.PHONY : src/Levels.cpp.i
 
-src/StartLvl.s: src/StartLvl.cpp.s
-.PHONY : src/StartLvl.s
+src/Levels.s: src/Levels.cpp.s
+.PHONY : src/Levels.s
 
 # target to generate assembly for a file
-src/StartLvl.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\example.dir\build.make CMakeFiles/example.dir/src/StartLvl.cpp.s
-.PHONY : src/StartLvl.cpp.s
+src/Levels.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\example.dir\build.make CMakeFiles/example.dir/src/Levels.cpp.s
+.PHONY : src/Levels.cpp.s
 
 src/player.obj: src/player.cpp.obj
 .PHONY : src/player.obj
@@ -346,15 +346,15 @@ help:
 	@echo ... example
 	@echo ... glfw
 	@echo ... raylib
-	@echo ... core_basic_window.obj
-	@echo ... core_basic_window.i
-	@echo ... core_basic_window.s
+	@echo ... main.obj
+	@echo ... main.i
+	@echo ... main.s
 	@echo ... src/EnvItem.obj
 	@echo ... src/EnvItem.i
 	@echo ... src/EnvItem.s
-	@echo ... src/StartLvl.obj
-	@echo ... src/StartLvl.i
-	@echo ... src/StartLvl.s
+	@echo ... src/Levels.obj
+	@echo ... src/Levels.i
+	@echo ... src/Levels.s
 	@echo ... src/player.obj
 	@echo ... src/player.i
 	@echo ... src/player.s

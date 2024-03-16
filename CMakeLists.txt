@@ -7,13 +7,13 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 SET(SOURCE
   src/EnvItem.cpp
   src/player.cpp
-  src/StartLvl.cpp
+  src/Levels.cpp
 )
 
 SET(HEADERS
    src/EnvItem.h
    src/player.h
-   src/StartLvl.h
+   src/Levels.h
 )
 
 # Dependencies
@@ -37,7 +37,7 @@ endif()
 
 # Our Project
 
-add_executable(${PROJECT_NAME} ${SOURCE} ${HEADERS} core_basic_window.cpp)
+add_executable(${PROJECT_NAME} ${SOURCE} ${HEADERS} main.cpp)
 #set(raylib_VERBOSE 1)
 target_link_libraries(${PROJECT_NAME} raylib)
 

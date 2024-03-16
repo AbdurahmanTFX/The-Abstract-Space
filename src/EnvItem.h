@@ -5,4 +5,5 @@ struct EnvItem{
     Rectangle rect;
     bool blocking;
     Color color;
+    bool number;
 };

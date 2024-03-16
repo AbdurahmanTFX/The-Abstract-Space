@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/Abdurahman/Documents/RayLibProjects/CMakeOptimized/core_basic_window.cpp" "CMakeFiles/example.dir/core_basic_window.cpp.obj" "gcc" "CMakeFiles/example.dir/core_basic_window.cpp.obj.d"
+  "C:/Users/Abdurahman/Documents/RayLibProjects/CMakeOptimized/main.cpp" "CMakeFiles/example.dir/main.cpp.obj" "gcc" "CMakeFiles/example.dir/main.cpp.obj.d"
   "C:/Users/Abdurahman/Documents/RayLibProjects/CMakeOptimized/src/EnvItem.cpp" "CMakeFiles/example.dir/src/EnvItem.cpp.obj" "gcc" "CMakeFiles/example.dir/src/EnvItem.cpp.obj.d"
-  "C:/Users/Abdurahman/Documents/RayLibProjects/CMakeOptimized/src/StartLvl.cpp" "CMakeFiles/example.dir/src/StartLvl.cpp.obj" "gcc" "CMakeFiles/example.dir/src/StartLvl.cpp.obj.d"
+  "C:/Users/Abdurahman/Documents/RayLibProjects/CMakeOptimized/src/Levels.cpp" "CMakeFiles/example.dir/src/Levels.cpp.obj" "gcc" "CMakeFiles/example.dir/src/Levels.cpp.obj.d"
   "C:/Users/Abdurahman/Documents/RayLibProjects/CMakeOptimized/src/player.cpp" "CMakeFiles/example.dir/src/player.cpp.obj" "gcc" "CMakeFiles/example.dir/src/player.cpp.obj.d"
   )
 

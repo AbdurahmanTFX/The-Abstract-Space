@@ -98,50 +98,50 @@ CMakeFiles/example.dir/src/player.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/example.dir/src/player.cpp.s"
 	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Abdurahman\Documents\RayLibProjects\CMakeOptimized\src\player.cpp -o CMakeFiles\example.dir\src\player.cpp.s
 
-CMakeFiles/example.dir/src/StartLvl.cpp.obj: CMakeFiles/example.dir/flags.make
-CMakeFiles/example.dir/src/StartLvl.cpp.obj: CMakeFiles/example.dir/includes_CXX.rsp
-CMakeFiles/example.dir/src/StartLvl.cpp.obj: C:/Users/Abdurahman/Documents/RayLibProjects/CMakeOptimized/src/StartLvl.cpp
-CMakeFiles/example.dir/src/StartLvl.cpp.obj: CMakeFiles/example.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Abdurahman\Documents\RayLibProjects\CMakeOptimized\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/example.dir/src/StartLvl.cpp.obj"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/example.dir/src/StartLvl.cpp.obj -MF CMakeFiles\example.dir\src\StartLvl.cpp.obj.d -o CMakeFiles\example.dir\src\StartLvl.cpp.obj -c C:\Users\Abdurahman\Documents\RayLibProjects\CMakeOptimized\src\StartLvl.cpp
+CMakeFiles/example.dir/src/Levels.cpp.obj: CMakeFiles/example.dir/flags.make
+CMakeFiles/example.dir/src/Levels.cpp.obj: CMakeFiles/example.dir/includes_CXX.rsp
+CMakeFiles/example.dir/src/Levels.cpp.obj: C:/Users/Abdurahman/Documents/RayLibProjects/CMakeOptimized/src/Levels.cpp
+CMakeFiles/example.dir/src/Levels.cpp.obj: CMakeFiles/example.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Abdurahman\Documents\RayLibProjects\CMakeOptimized\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/example.dir/src/Levels.cpp.obj"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/example.dir/src/Levels.cpp.obj -MF CMakeFiles\example.dir\src\Levels.cpp.obj.d -o CMakeFiles\example.dir\src\Levels.cpp.obj -c C:\Users\Abdurahman\Documents\RayLibProjects\CMakeOptimized\src\Levels.cpp
 
-CMakeFiles/example.dir/src/StartLvl.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/example.dir/src/StartLvl.cpp.i"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Abdurahman\Documents\RayLibProjects\CMakeOptimized\src\StartLvl.cpp > CMakeFiles\example.dir\src\StartLvl.cpp.i
+CMakeFiles/example.dir/src/Levels.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/example.dir/src/Levels.cpp.i"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Abdurahman\Documents\RayLibProjects\CMakeOptimized\src\Levels.cpp > CMakeFiles\example.dir\src\Levels.cpp.i
 
-CMakeFiles/example.dir/src/StartLvl.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/example.dir/src/StartLvl.cpp.s"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Abdurahman\Documents\RayLibProjects\CMakeOptimized\src\StartLvl.cpp -o CMakeFiles\example.dir\src\StartLvl.cpp.s
+CMakeFiles/example.dir/src/Levels.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/example.dir/src/Levels.cpp.s"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Abdurahman\Documents\RayLibProjects\CMakeOptimized\src\Levels.cpp -o CMakeFiles\example.dir\src\Levels.cpp.s
 
-CMakeFiles/example.dir/core_basic_window.cpp.obj: CMakeFiles/example.dir/flags.make
-CMakeFiles/example.dir/core_basic_window.cpp.obj: CMakeFiles/example.dir/includes_CXX.rsp
-CMakeFiles/example.dir/core_basic_window.cpp.obj: C:/Users/Abdurahman/Documents/RayLibProjects/CMakeOptimized/core_basic_window.cpp
-CMakeFiles/example.dir/core_basic_window.cpp.obj: CMakeFiles/example.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Abdurahman\Documents\RayLibProjects\CMakeOptimized\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/example.dir/core_basic_window.cpp.obj"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/example.dir/core_basic_window.cpp.obj -MF CMakeFiles\example.dir\core_basic_window.cpp.obj.d -o CMakeFiles\example.dir\core_basic_window.cpp.obj -c C:\Users\Abdurahman\Documents\RayLibProjects\CMakeOptimized\core_basic_window.cpp
+CMakeFiles/example.dir/main.cpp.obj: CMakeFiles/example.dir/flags.make
+CMakeFiles/example.dir/main.cpp.obj: CMakeFiles/example.dir/includes_CXX.rsp
+CMakeFiles/example.dir/main.cpp.obj: C:/Users/Abdurahman/Documents/RayLibProjects/CMakeOptimized/main.cpp
+CMakeFiles/example.dir/main.cpp.obj: CMakeFiles/example.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Abdurahman\Documents\RayLibProjects\CMakeOptimized\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/example.dir/main.cpp.obj"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/example.dir/main.cpp.obj -MF CMakeFiles\example.dir\main.cpp.obj.d -o CMakeFiles\example.dir\main.cpp.obj -c C:\Users\Abdurahman\Documents\RayLibProjects\CMakeOptimized\main.cpp
 
-CMakeFiles/example.dir/core_basic_window.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/example.dir/core_basic_window.cpp.i"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Abdurahman\Documents\RayLibProjects\CMakeOptimized\core_basic_window.cpp > CMakeFiles\example.dir\core_basic_window.cpp.i
+CMakeFiles/example.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/example.dir/main.cpp.i"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Abdurahman\Documents\RayLibProjects\CMakeOptimized\main.cpp > CMakeFiles\example.dir\main.cpp.i
 
-CMakeFiles/example.dir/core_basic_window.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/example.dir/core_basic_window.cpp.s"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Abdurahman\Documents\RayLibProjects\CMakeOptimized\core_basic_window.cpp -o CMakeFiles\example.dir\core_basic_window.cpp.s
+CMakeFiles/example.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/example.dir/main.cpp.s"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Abdurahman\Documents\RayLibProjects\CMakeOptimized\main.cpp -o CMakeFiles\example.dir\main.cpp.s
 
 # Object files for target example
 example_OBJECTS = \
 "CMakeFiles/example.dir/src/EnvItem.cpp.obj" \
 "CMakeFiles/example.dir/src/player.cpp.obj" \
-"CMakeFiles/example.dir/src/StartLvl.cpp.obj" \
-"CMakeFiles/example.dir/core_basic_window.cpp.obj"
+"CMakeFiles/example.dir/src/Levels.cpp.obj" \
+"CMakeFiles/example.dir/main.cpp.obj"
 
 # External object files for target example
 example_EXTERNAL_OBJECTS =
 
 example.exe: CMakeFiles/example.dir/src/EnvItem.cpp.obj
 example.exe: CMakeFiles/example.dir/src/player.cpp.obj
-example.exe: CMakeFiles/example.dir/src/StartLvl.cpp.obj
-example.exe: CMakeFiles/example.dir/core_basic_window.cpp.obj
+example.exe: CMakeFiles/example.dir/src/Levels.cpp.obj
+example.exe: CMakeFiles/example.dir/main.cpp.obj
 example.exe: CMakeFiles/example.dir/build.make
 example.exe: _deps/raylib-build/raylib/libraylib.a
 example.exe: _deps/raylib-build/raylib/external/glfw/src/libglfw3.a
