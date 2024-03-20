@@ -3,7 +3,6 @@
 #include "src/EnvItem.h"
 #include <vector>
 #include <iostream>
-#include <string>
 
 #if defined(PLATFORM_WEB)
     #include <emscripten/emscripten.h>
@@ -23,8 +22,14 @@ int main()
     SetWindowSize(GetMonitorWidth(monitor), GetMonitorHeight(monitor));
     ToggleFullscreen();
 
-    Rectangle plrRec = {float(screenWidth / 2), float(screenHeight / 2), 25, 25};
-    player plr(plrRec);
+    Rectangle plrRec{
+        float(screenWidth / 2), float(screenHeight / 2), 25, 25
+    };
+    Rectangle dashProgressBar{
+        float((screenWidth / 2) - 500), float(screenHeight - (screenHeight / 5)), 1000, 25
+    };
+
+    player plr(plrRec, dashProgressBar);
 
     std::vector <std::pair <EnvItem, EnvItem>> obstacles;
     std::pair <EnvItem, EnvItem> temp;
@@ -43,7 +48,9 @@ int main()
     obstacles.push_back(temp2);
     obstacles.push_back(temp3);
     obstacles.push_back(temp4);
+    
     float deltaTime = GetFrameTime();
+
 #if defined(PLATFORM_WEB)
     emscripten_set_main_loop(UpdateDrawFrame, 0, 1);
 #else
@@ -53,7 +60,7 @@ int main()
     while (!WindowShouldClose())
     {
         deltaTime = GetFrameTime();
-        plr.update(obstacles, deltaTime);
+        plr.update(obstacles, deltaTime, dashProgressBar.width);
 
         BeginDrawing();
 
@@ -61,7 +68,8 @@ int main()
             for(int i = 0; i < static_cast<int>(obstacles.size()); i++){
                 DrawRectangleRec(obstacles[i].first.rect, obstacles[i].first.color);
             }
-            DrawRectangleRec(plr.GetRec(), GREEN);
+            DrawRectangleRec(plr.GetDashBarRec(), plr.GetDashColor());
+            DrawRectangleRec(plr.GetPlayerRec(), GREEN);
 
         EndDrawing();
     }

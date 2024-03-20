@@ -18,14 +18,29 @@ enum playerdir{
 
 class player{
     private:
-        playerdir dir = playerdir::NONE;
-        playerdir RectSideCollision = playerdir::NONE;
+
         Rectangle playerHitBox;
-        bool collisionDetected = false;
+        int OriginalSpeed = 300;
         int speed = 300;
+
+
+        Rectangle dashProgressBar;
+        bool dash = false;
+        playerdir dashDir = playerdir::NONE;
+        float dashCurrentTimer;
+        float dashDurationTimer;
+        float dashCurrentBarTimer;
+        float dashDurationBarTimer;
+        Color dashColor = GREEN;
+
     public:
-        player(const Rectangle &rec);
-        void setSpeed(const int &speed);
-        Rectangle GetRec();
-        void update(std::vector <std::pair <EnvItem, EnvItem>> obstacles, float delta);
+
+        player(const Rectangle &playerRec, const Rectangle &dashBar);
+        void SetSpeed(const int &speed);
+        void SetDashColor(const Color &clr);
+        Rectangle GetPlayerRec();
+        Rectangle GetDashBarRec();
+        Color GetDashColor();
+        void update(std::vector <std::pair <EnvItem, EnvItem>> obstacles, float delta, const float &dashbar);
+
 };
