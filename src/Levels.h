@@ -5,6 +5,8 @@
 #include "EnvItem.h"
 
 
-std::vector <std::pair <EnvItem, EnvItem>> obstacles(std::vector <std::pair <EnvItem, EnvItem>>){
+// std::vector <std::pair <EnvItem, EnvItem>> obstacles(std::vector <std::pair <EnvItem, EnvItem>>){
     
-}
+// }
+
+void TestLevel(std::vector <std::pair <EnvItem, Vector2>> &obstacles);
