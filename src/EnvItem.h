@@ -35,6 +35,6 @@ class EnvItem{
         dir Dir = dir::NONE;
         bool blocking = 1;
         void AllSet(const Rectangle& rect, const bool& blocking, const Color& color, const float& speed);
-        void update(Vector2 finishPos, float delta);
+        void update(Vector2 finishPos, float delta, Rectangle plr);
         dir GetDir();
 };

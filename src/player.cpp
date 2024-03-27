@@ -5,12 +5,17 @@ player::player(const Rectangle &playerRec, const Rectangle &dashBar){
     this->dashProgressBar = dashBar;
 }
 
+void player::SetDashPos(const Rectangle &dashBar){
+    this->dashProgressBar.y = dashBar.y;
+    this->dashProgressBar.x = dashBar.x;
+}
+
 void player::SetSpeed(const int &speed){
     this->speed = speed;
 }
 
-void player::SetDashColor(const Color &clr){
-    this->dashColor = clr;
+void player::SetDashColor(const Color &color){
+    this->dashColor = color;
 }
 
 Rectangle player::GetRec(){

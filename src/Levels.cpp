@@ -2,36 +2,25 @@
 
 
 void TestLevel(std::vector <std::pair <EnvItem, Vector2>> &obstacles){
-    std::pair <EnvItem, Vector2> test;
-    std::pair <EnvItem, Vector2> test1;
-    std::pair <EnvItem, Vector2> test2;
-    std::pair <EnvItem, Vector2> test3;
+    std::pair <EnvItem, Vector2> rightWall;
+    std::pair <EnvItem, Vector2> leftWall;
+    std::pair <EnvItem, Vector2> upWall;
+    std::pair <EnvItem, Vector2> downWall;
 
-    // std::pair <EnvItem, Vector2> test0;
-    // std::pair <EnvItem, Vector2> test11;
-    // std::pair <EnvItem, Vector2> test22;
-    // std::pair <EnvItem, Vector2> test33;
+    rightWall.first.AllSet(Rectangle{0, 0, 100, 50}, true, RED, 600);
+    rightWall.second = {1000, 800};
 
-    test.first.AllSet(Rectangle{0, 0, 100, 50}, true, RED, 800);
-    test.second = {1000, 800};
+    leftWall.first.AllSet(Rectangle{1200, 0, 100, 50}, true, RED, 600);
+    leftWall.second = {0, 800};
 
-    test1.first.AllSet(Rectangle{1200, 0, 100, 50}, true, RED, 500);
-    test1.second = {0, 800};
+    upWall.first.AllSet(Rectangle{1000, 200, 100, 50}, true, RED, 600);
+    upWall.second = {1000, 200};
 
-    test2.first.AllSet(Rectangle{0, 800, 100, 50}, true, RED, 600);
-    test2.second = {1000, 0};
+    downWall.first.AllSet(Rectangle{1200, 800, 100, 50}, true, RED, 600);
+    downWall.second = {0, 0};
 
-    test3.first.AllSet(Rectangle{1200, 800, 100, 50}, true, RED, 900);
-    test3.second = {0, 0};
-
-    // test.first.AllSet(Rectangle{0, 0, 100, 50}, true, RED, 360);
-    // test.second = {1000, 800};
-
-    // test.first.AllSet(Rectangle{0, 0, 100, 50}, true, RED, 360);
-    // test.second = {1000, 800};
-
-    obstacles.push_back(test);
-    obstacles.push_back(test1);
-    obstacles.push_back(test2);
-    obstacles.push_back(test3);
+    obstacles.push_back(rightWall);
+    obstacles.push_back(leftWall);
+    obstacles.push_back(upWall);
+    obstacles.push_back(downWall);
 }

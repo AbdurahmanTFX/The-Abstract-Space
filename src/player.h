@@ -26,5 +26,6 @@ class player{
         Rectangle GetDashBarRec();
         Color GetDashColor();
         void update(std::vector <std::pair<EnvItem, Vector2>> obstacles, float delta, const float &dashBarWidth);
+        void SetDashPos(const Rectangle &dashBar);
 
 };

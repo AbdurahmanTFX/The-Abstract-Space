@@ -9,25 +9,18 @@
     #include <emscripten/emscripten.h>
 #endif
 
-
-
-
-
 int main()
 {
-    InitWindow(0, 0, "raylib [core] example - basic window");
+    const int screenWidth = 1280;
+    const int screenHeight = 720;
+    InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
     SetWindowState(FLAG_WINDOW_RESIZABLE);
-    int monitor = GetCurrentMonitor();
-    int screenWidth = GetMonitorWidth(monitor);
-    int screenHeight = GetMonitorHeight(monitor);
-    SetWindowSize(GetMonitorWidth(monitor), GetMonitorHeight(monitor));
-    ToggleFullscreen();
 
     Rectangle plrRec{
         float(screenWidth / 2), float(screenHeight / 2), 25, 25
     };
     Rectangle dashProgressBar{
-        float((screenWidth / 2) - 500), float(screenHeight - (screenHeight / 5)), 1000, 25
+        plrRec.x - 50, plrRec.y - 50, 100, 25
     };
 
     player plr(plrRec, dashProgressBar);
@@ -48,15 +41,37 @@ int main()
         deltaTime = GetFrameTime();
         
         for(int i = 0; i < static_cast<int>(obstacles.size()); i++){
-            obstacles[i].first.update(obstacles[i].second, deltaTime);
+            obstacles[i].first.update(obstacles[i].second, deltaTime, plr.GetRec());
         }
 
+        
+
         plr.update(obstacles, deltaTime, dashProgressBar.width);
+
+        dashProgressBar.x = plr.GetRec().x - 50;
+        dashProgressBar.y = plr.GetRec().y - 50;
+        plr.SetDashPos(dashProgressBar);
 
         if(IsKeyPressed('Q')){
             obstacles.clear();
             TestLevel(obstacles);
         }
+
+        if (IsKeyPressed(KEY_F5))
+		{
+			if (IsWindowFullscreen())
+			{
+				ToggleFullscreen();
+				SetWindowSize(screenWidth, screenHeight);
+			}
+			else
+			{
+				int monitor = GetCurrentMonitor();
+				SetWindowSize(GetMonitorWidth(monitor), GetMonitorHeight(monitor));
+				ToggleFullscreen();
+			}
+		}
+
         BeginDrawing();
 
             ClearBackground(RAYWHITE);

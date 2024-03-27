@@ -11,12 +11,15 @@ dir EnvItem::GetDir(){
     return this->Dir;
 }
 
-void EnvItem::update(Vector2 finishPos, float delta) {
+void EnvItem::update(Vector2 finishPos, float delta, Rectangle plr) {
     // Получаем состояние клавиш для движения
     bool LeftMove = this->rect.x > finishPos.x;
     bool RightMove = this->rect.x < finishPos.x;
     bool UpMove = this->rect.y > finishPos.y;
     bool DownMove = this->rect.y < finishPos.y;
+
+    float originalX = this->rect.x;
+    float originalY = this->rect.y;
 
     if (LeftMove && UpMove) this->Dir = dir::TOP_LEFT;
     else if (RightMove && UpMove) this->Dir = dir::TOP_RIGHT;
@@ -33,38 +36,68 @@ void EnvItem::update(Vector2 finishPos, float delta) {
         case dir::TOP_LEFT:
             this->rect.x -= speed * delta;
             this->rect.y -= speed * delta;
+            if(rect.x <= finishPos.x){
+                rect.x = finishPos.x;
+            }
+            if(rect.y <= finishPos.y){
+                rect.y = finishPos.y;
+            }
             break;
         case dir::TOP_RIGHT:
             this->rect.x += speed * delta;
             this->rect.y -= speed * delta;
+            if(rect.x >= finishPos.x){
+                rect.x = finishPos.x;
+            }
+            if(rect.y <= finishPos.y){
+                rect.y = finishPos.y;
+            }
             break;
         case dir::BOTTOM_LEFT:
             this->rect.x -= speed * delta;
             this->rect.y += speed * delta;
+            if(rect.x <= finishPos.x){
+                rect.x = finishPos.x;
+            }
+            if(rect.y >= finishPos.y){
+                rect.y = finishPos.y;
+            }
             break;
         case dir::BOTTOM_RIGHT:
             this->rect.x += speed * delta;
             this->rect.y += speed * delta;
+            if(rect.x >= finishPos.x){
+                rect.x = finishPos.x;
+            }
+            if(rect.y >= finishPos.y){
+                rect.y = finishPos.y;
+            }
             break;
         case dir::LEFT:
             this->rect.x -= speed * delta;
+            if(rect.x <= finishPos.x){
+                rect.x = finishPos.x;
+            }
             break;
         case dir::RIGHT:
             this->rect.x += speed * delta;
+            if(rect.x >= finishPos.x){
+                rect.x = finishPos.x;
+            }
             break;
         case dir::TOP:
             this->rect.y -= speed * delta;
+            if(rect.y <= finishPos.y){
+                rect.y = finishPos.y;
+            }
             break;
         case dir::BOTTOM:
             this->rect.y += speed * delta;
+            if(rect.y >= finishPos.y){
+                rect.y = finishPos.y;
+            }
             break;
         default:
             break;
-    }
-
-    if (this->rect.x == finishPos.x && this->rect.y == finishPos.y) {
-        // Возвращаем игрока на предыдущие координаты
-        this->rect.x = finishPos.x;
-        this->rect.y = finishPos.y;
     }
  }
