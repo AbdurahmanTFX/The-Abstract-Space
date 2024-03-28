@@ -34,7 +34,7 @@ int main()
     emscripten_set_main_loop(UpdateDrawFrame, 0, 1);
 #else
 
-    SetTargetFPS(1000);
+    SetTargetFPS(144);
 
     while (!WindowShouldClose())
     {
@@ -48,7 +48,7 @@ int main()
 
         plr.update(obstacles, deltaTime, dashProgressBar.width);
 
-        dashProgressBar.x = plr.GetRec().x - 50;
+        dashProgressBar.x = plr.GetRec().x + plr.GetRec().width / 2 - dashProgressBar.width / 2;
         dashProgressBar.y = plr.GetRec().y - 50;
         plr.SetDashPos(dashProgressBar);
 

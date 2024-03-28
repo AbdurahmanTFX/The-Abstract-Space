@@ -164,7 +164,7 @@ Color player::GetDashColor(){
             if((obstaclePair.first.Dir == dir::BOTTOM
             || obstaclePair.first.Dir == dir::BOTTOM_LEFT
             || obstaclePair.first.Dir == dir::BOTTOM_RIGHT)
-            && this->rect.y + 1 >= obstacleRect.y + obstacleRect.height){
+            && this->rect.y + obstaclePair.first.speed * delta >= obstacleRect.y + obstacleRect.height){
                 this->rect.y += obstaclePair.first.speed * delta;
             }
             else if(obstaclePair.first.Dir == dir::BOTTOM_RIGHT){
@@ -176,7 +176,7 @@ Color player::GetDashColor(){
             else if((obstaclePair.first.Dir == dir::TOP
             || obstaclePair.first.Dir == dir::TOP_LEFT
             || obstaclePair.first.Dir == dir::TOP_RIGHT)
-            && this->rect.y + this->rect.height - 1 <= obstacleRect.y){
+            && this->rect.y + this->rect.height - obstaclePair.first.speed * delta <= obstacleRect.y){
                 this->rect.y -= obstaclePair.first.speed * delta;
             }
             else if(obstaclePair.first.Dir == dir::TOP_RIGHT){
@@ -223,14 +223,8 @@ Color player::GetDashColor(){
             || rect.y + rect.height > obstacleRect.y)){
                 this->rect.y -= speed * delta;
             }
-
-            collisionDetected = true;
             break; // Выходим из цикла после первого обнаружения столкновения
         }
-
-        if (collisionDetected) {
-            return;
-        }  
     }
  }
     
