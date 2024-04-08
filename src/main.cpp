@@ -1,7 +1,7 @@
 #include "raylib.h"
-#include "src/player.h"
-#include "src/EnvItem.h"
-#include "src/Levels.h"
+#include "player.h"
+#include "EnvItem.h"
+#include "Levels.h"
 #include <vector>
 #include <iostream>
 

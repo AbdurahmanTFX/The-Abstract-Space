@@ -113,27 +113,27 @@ CMakeFiles/example.dir/src/Levels.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/example.dir/src/Levels.cpp.s"
 	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Abdurahman\Documents\RayLibProjects\CMakeOptimized\src\Levels.cpp -o CMakeFiles\example.dir\src\Levels.cpp.s
 
-CMakeFiles/example.dir/main.cpp.obj: CMakeFiles/example.dir/flags.make
-CMakeFiles/example.dir/main.cpp.obj: CMakeFiles/example.dir/includes_CXX.rsp
-CMakeFiles/example.dir/main.cpp.obj: C:/Users/Abdurahman/Documents/RayLibProjects/CMakeOptimized/main.cpp
-CMakeFiles/example.dir/main.cpp.obj: CMakeFiles/example.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Abdurahman\Documents\RayLibProjects\CMakeOptimized\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/example.dir/main.cpp.obj"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/example.dir/main.cpp.obj -MF CMakeFiles\example.dir\main.cpp.obj.d -o CMakeFiles\example.dir\main.cpp.obj -c C:\Users\Abdurahman\Documents\RayLibProjects\CMakeOptimized\main.cpp
+CMakeFiles/example.dir/src/main.cpp.obj: CMakeFiles/example.dir/flags.make
+CMakeFiles/example.dir/src/main.cpp.obj: CMakeFiles/example.dir/includes_CXX.rsp
+CMakeFiles/example.dir/src/main.cpp.obj: C:/Users/Abdurahman/Documents/RayLibProjects/CMakeOptimized/src/main.cpp
+CMakeFiles/example.dir/src/main.cpp.obj: CMakeFiles/example.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Abdurahman\Documents\RayLibProjects\CMakeOptimized\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/example.dir/src/main.cpp.obj"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/example.dir/src/main.cpp.obj -MF CMakeFiles\example.dir\src\main.cpp.obj.d -o CMakeFiles\example.dir\src\main.cpp.obj -c C:\Users\Abdurahman\Documents\RayLibProjects\CMakeOptimized\src\main.cpp
 
-CMakeFiles/example.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/example.dir/main.cpp.i"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Abdurahman\Documents\RayLibProjects\CMakeOptimized\main.cpp > CMakeFiles\example.dir\main.cpp.i
+CMakeFiles/example.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/example.dir/src/main.cpp.i"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Abdurahman\Documents\RayLibProjects\CMakeOptimized\src\main.cpp > CMakeFiles\example.dir\src\main.cpp.i
 
-CMakeFiles/example.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/example.dir/main.cpp.s"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Abdurahman\Documents\RayLibProjects\CMakeOptimized\main.cpp -o CMakeFiles\example.dir\main.cpp.s
+CMakeFiles/example.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/example.dir/src/main.cpp.s"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Abdurahman\Documents\RayLibProjects\CMakeOptimized\src\main.cpp -o CMakeFiles\example.dir\src\main.cpp.s
 
 # Object files for target example
 example_OBJECTS = \
 "CMakeFiles/example.dir/src/EnvItem.cpp.obj" \
 "CMakeFiles/example.dir/src/player.cpp.obj" \
 "CMakeFiles/example.dir/src/Levels.cpp.obj" \
-"CMakeFiles/example.dir/main.cpp.obj"
+"CMakeFiles/example.dir/src/main.cpp.obj"
 
 # External object files for target example
 example_EXTERNAL_OBJECTS =
@@ -141,7 +141,7 @@ example_EXTERNAL_OBJECTS =
 example.exe: CMakeFiles/example.dir/src/EnvItem.cpp.obj
 example.exe: CMakeFiles/example.dir/src/player.cpp.obj
 example.exe: CMakeFiles/example.dir/src/Levels.cpp.obj
-example.exe: CMakeFiles/example.dir/main.cpp.obj
+example.exe: CMakeFiles/example.dir/src/main.cpp.obj
 example.exe: CMakeFiles/example.dir/build.make
 example.exe: _deps/raylib-build/raylib/libraylib.a
 example.exe: _deps/raylib-build/raylib/external/glfw/src/libglfw3.a
