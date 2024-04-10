@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Abdurahman\Documents\RayLibProjects\TheAbsteactSpace\src\EnvItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Abdurahman\Documents\RayLibProjects\TheAbsteactSpace\src\player.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Abdurahman\Documents\RayLibProjects\TheAbsteactSpace\src\Levels.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Abdurahman\Documents\RayLibProjects\TheAbsteactSpace\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Abdurahman\Documents\RayLibProjects\TheAbsteactSpace\src\EnvItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Abdurahman\Documents\RayLibProjects\TheAbsteactSpace\src\player.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Abdurahman\Documents\RayLibProjects\TheAbsteactSpace\src\Levels.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Abdurahman\Documents\RayLibProjects\TheAbsteactSpace\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{984A76DC-A84A-377B-B5F6-7D05EAE8ACDB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{E611C44F-C6D4-3291-AD1F-033A533AC38B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

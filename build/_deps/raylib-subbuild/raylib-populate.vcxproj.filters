@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Abdurahman\Documents\RayLibProjects\TheAbsteactSpace\build\_deps\raylib-subbuild\CMakeFiles\31249b5c0f655ff49bae8d7a6d7b9e3a\raylib-populate-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Abdurahman\Documents\RayLibProjects\TheAbsteactSpace\build\_deps\raylib-subbuild\CMakeFiles\31249b5c0f655ff49bae8d7a6d7b9e3a\raylib-populate-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Abdurahman\Documents\RayLibProjects\TheAbsteactSpace\build\_deps\raylib-subbuild\CMakeFiles\31249b5c0f655ff49bae8d7a6d7b9e3a\raylib-populate-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Abdurahman\Documents\RayLibProjects\TheAbsteactSpace\build\_deps\raylib-subbuild\CMakeFiles\31249b5c0f655ff49bae8d7a6d7b9e3a\raylib-populate-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Abdurahman\Documents\RayLibProjects\TheAbsteactSpace\build\_deps\raylib-subbuild\CMakeFiles\31249b5c0f655ff49bae8d7a6d7b9e3a\raylib-populate-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Abdurahman\Documents\RayLibProjects\TheAbsteactSpace\build\_deps\raylib-subbuild\CMakeFiles\31249b5c0f655ff49bae8d7a6d7b9e3a\raylib-populate-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Abdurahman\Documents\RayLibProjects\TheAbsteactSpace\build\_deps\raylib-subbuild\CMakeFiles\31249b5c0f655ff49bae8d7a6d7b9e3a\raylib-populate-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Abdurahman\Documents\RayLibProjects\TheAbsteactSpace\build\_deps\raylib-subbuild\CMakeFiles\31249b5c0f655ff49bae8d7a6d7b9e3a\raylib-populate-test.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Abdurahman\Documents\RayLibProjects\TheAbsteactSpace\build\_deps\raylib-subbuild\CMakeFiles\7681e92bffea9b08af27e09aece04b3f\raylib-populate-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Abdurahman\Documents\RayLibProjects\TheAbsteactSpace\build\_deps\raylib-subbuild\CMakeFiles\d4d633eac591e3f15f5546df0ca378fc\raylib-populate.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Abdurahman\Documents\RayLibProjects\TheAbsteactSpace\build\_deps\raylib-subbuild\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\Abdurahman\Documents\RayLibProjects\TheAbsteactSpace\build\_deps\raylib-subbuild\CMakeFiles\raylib-populate" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{C26545DD-8172-3D6D-998B-360774124687}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

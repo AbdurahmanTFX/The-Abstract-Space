@@ -1,9 +1,9 @@
+#include <vector>
+#include <utility>
 #include "raylib.h"
 #include "player.h"
 #include "EnvItem.h"
 #include "Levels.h"
-#include <vector>
-#include <iostream>
 
 #if defined(PLATFORM_WEB)
     #include <emscripten/emscripten.h>
@@ -11,9 +11,9 @@
 
 int main()
 {
-    const int screenWidth = 1280;
-    const int screenHeight = 720;
-    InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
+    const int screenWidth = 800;
+    const int screenHeight = 450;
+    InitWindow(screenWidth, screenHeight, "The abstract space");
     SetWindowState(FLAG_WINDOW_RESIZABLE);
 
     Rectangle plrRec{
@@ -43,8 +43,6 @@ int main()
         for(int i = 0; i < static_cast<int>(obstacles.size()); i++){
             obstacles[i].first.update(obstacles[i].second, deltaTime, plr.GetRec());
         }
-
-        
 
         plr.update(obstacles, deltaTime, dashProgressBar.width);
 

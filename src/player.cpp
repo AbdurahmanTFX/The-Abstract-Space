@@ -32,14 +32,16 @@ Color player::GetDashColor(){
 
  void player::update(std::vector <std::pair<EnvItem, Vector2>> obstacles, float delta, const float &dashBarWidth) {
     
-    // Получаем состояние клавиш для движения
     bool isKeyLeftPressed = IsKeyDown('A') || IsKeyPressed('A');
     bool isKeyRightPressed = IsKeyDown('D') || IsKeyPressed('D');
     bool isKeyUpPressed = IsKeyDown('W') || IsKeyPressed('W');
     bool isKeyDownPressed = IsKeyDown('S') || IsKeyPressed('S');
 
-    // Определяем направление движения
     dir Dir = dir::NONE;
+
+    float originalX = this->rect.x;
+    float originalY = this->rect.y;
+
     if (isKeyLeftPressed && isKeyUpPressed) Dir = dir::TOP_LEFT;
     else if (isKeyRightPressed && isKeyUpPressed) Dir = dir::TOP_RIGHT;
     else if (isKeyLeftPressed && isKeyDownPressed) Dir = dir::BOTTOM_LEFT;
@@ -48,13 +50,6 @@ Color player::GetDashColor(){
     else if (isKeyDownPressed) Dir = dir::BOTTOM;
     else if (isKeyLeftPressed) Dir = dir::LEFT;
     else if (isKeyRightPressed) Dir = dir::RIGHT;
-
-    // Сохраняем начальные координаты игрока
-    float originalX = this->rect.x;
-    float originalY = this->rect.y;
-
-    // Флаг для обозначения столкновения
-    bool collisionDetected = false;
     
     if(IsKeyPressed(KEY_SPACE) && !this->dash && this->dashProgressBar.width >= dashBarWidth){
         this->dashProgressBar.width = 0;
@@ -72,8 +67,9 @@ Color player::GetDashColor(){
         this->dashCurrentTimer = GetTime();
         this->dashCurrentBarTimer = GetTime();
 
-        dashProgressBar.width = 
-            (dashBarWidth / 100) * ((this->dashCurrentBarTimer - this->dashDurationBarTimer) * 100);
+        dashProgressBar.width = {
+            (dashBarWidth / 100) * ((this->dashCurrentBarTimer - this->dashDurationBarTimer) * 100)
+        };
         
         if((this->dashDurationTimer - this->dashCurrentTimer) <= 0){
             if(this->dashProgressBar.width >= dashBarWidth){
@@ -84,8 +80,7 @@ Color player::GetDashColor(){
             this->speed = this->OriginalSpeed;
         }
     }
-    
-    // Обновляем координаты игрока в соответствии с направлением
+
     switch (Dir) {
         case dir::TOP_LEFT:
             this->rect.x -= speed * delta;
@@ -152,12 +147,10 @@ Color player::GetDashColor(){
             break;
     }
 
-    // Проверяем столкновения с препятствиями
     for(const auto& obstaclePair : obstacles) {
         const Rectangle& obstacleRect = obstaclePair.first.rect;
  
         if (CheckCollisionRecs(this->rect, obstacleRect) && obstaclePair.first.blocking) {
-            // Возвращаем игрока на предыдущие координаты
             this->rect.x = originalX;
             this->rect.y = originalY;
             
@@ -196,34 +189,35 @@ Color player::GetDashColor(){
             }
 
             if((Dir == dir::BOTTOM_LEFT || this->dashDir == dir::BOTTOM_LEFT) 
-            && rect.y + rect.height - 1 < obstacleRect.y){
+            && rect.y + rect.height < obstacleRect.y){
                 this->rect.x -= speed * delta;
             }
             else if((Dir == dir::BOTTOM_RIGHT || this->dashDir == dir::BOTTOM_RIGHT)
-            && rect.y + rect.height - 1 < obstacleRect.y){
+            && rect.y + rect.height < obstacleRect.y){
                 this->rect.x += speed * delta;
             }
             else if((Dir == dir::TOP_LEFT || this->dashDir == dir::TOP_LEFT)
-            && rect.y + 1 > obstacleRect.y + obstacleRect.height){
+            && rect.y > obstacleRect.y + obstacleRect.height){
                 this->rect.x -= speed * delta;
             }
             else if((Dir == dir::TOP_RIGHT || this->dashDir == dir::TOP_RIGHT)
-            && rect.y + 1 > obstacleRect.y + obstacleRect.height){
+            && rect.y > obstacleRect.y + obstacleRect.height){
                 this->rect.x += speed * delta;
             }
             else if((Dir == dir::BOTTOM_LEFT || Dir == dir::BOTTOM_RIGHT 
             || this->dashDir == dir::BOTTOM_LEFT || this->dashDir == dir::BOTTOM_RIGHT)
-            && (rect.y - 1 < obstacleRect.y + obstacleRect.height
+            && (rect.y < obstacleRect.y + obstacleRect.height
             || rect.y + rect.height > obstacleRect.y)){
                 this->rect.y += speed * delta;
             }
             else if((Dir == dir::TOP_LEFT || Dir == dir::TOP_RIGHT 
             || this->dashDir == dir::TOP_LEFT || this->dashDir == dir::TOP_RIGHT)
-            && (rect.y + 1 > obstacleRect.y + obstacleRect.height
+            && (rect.y > obstacleRect.y + obstacleRect.height
             || rect.y + rect.height > obstacleRect.y)){
                 this->rect.y -= speed * delta;
             }
-            break; // Выходим из цикла после первого обнаружения столкновения
+
+            break;
         }
     }
  }

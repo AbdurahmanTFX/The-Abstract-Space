@@ -3,9 +3,9 @@
 # No other meaning or use of this file is supported.
 
 method=url
-command=C:/Program Files/CMake/bin/cmake.exe;-P;C:/Users/Abdurahman/Documents/RayLibProjects/CMakeOptimized/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/download-raylib-populate.cmake;COMMAND;C:/Program Files/CMake/bin/cmake.exe;-P;C:/Users/Abdurahman/Documents/RayLibProjects/CMakeOptimized/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/verify-raylib-populate.cmake;COMMAND;C:/Program Files/CMake/bin/cmake.exe;-P;C:/Users/Abdurahman/Documents/RayLibProjects/CMakeOptimized/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/extract-raylib-populate.cmake
-source_dir=C:/Users/Abdurahman/Documents/RayLibProjects/CMakeOptimized/build/_deps/raylib-src
-work_dir=C:/Users/Abdurahman/Documents/RayLibProjects/CMakeOptimized/build/_deps
+command=C:/Program Files/CMake/bin/cmake.exe;-P;C:/Users/Abdurahman/Documents/RayLibProjects/TheAbsteactSpace/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/download-raylib-populate.cmake;COMMAND;C:/Program Files/CMake/bin/cmake.exe;-P;C:/Users/Abdurahman/Documents/RayLibProjects/TheAbsteactSpace/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/verify-raylib-populate.cmake;COMMAND;C:/Program Files/CMake/bin/cmake.exe;-P;C:/Users/Abdurahman/Documents/RayLibProjects/TheAbsteactSpace/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/extract-raylib-populate.cmake
+source_dir=C:/Users/Abdurahman/Documents/RayLibProjects/TheAbsteactSpace/build/_deps/raylib-src
+work_dir=C:/Users/Abdurahman/Documents/RayLibProjects/TheAbsteactSpace/build/_deps
 url(s)=https://github.com/raysan5/raylib/archive/refs/tags/4.5.0.tar.gz
 hash=
 no_extract=

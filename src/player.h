@@ -1,8 +1,8 @@
 #pragma once
+#include <utility>
+#include <vector>
 #include "raylib.h"
 #include "EnvItem.h"
-#include <iostream>
-#include <vector>
 
 class player{
     private:
@@ -16,8 +16,9 @@ class player{
         float dashDurationBarTimer;
         Color dashColor = GREEN;
 
-        int speed = 300;
+        int speed = OriginalSpeed;
         Rectangle rect;
+
     public:
         player(const Rectangle &playerRec, const Rectangle &dashBar);
         void SetSpeed(const int &speed);

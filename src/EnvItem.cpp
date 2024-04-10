@@ -12,7 +12,6 @@ dir EnvItem::GetDir(){
 }
 
 void EnvItem::update(Vector2 finishPos, float delta, Rectangle plr) {
-    // Получаем состояние клавиш для движения
     bool LeftMove = this->rect.x > finishPos.x;
     bool RightMove = this->rect.x < finishPos.x;
     bool UpMove = this->rect.y > finishPos.y;
@@ -31,7 +30,6 @@ void EnvItem::update(Vector2 finishPos, float delta, Rectangle plr) {
     else if (RightMove) this->Dir = dir::RIGHT;
     else if(this->rect.y == finishPos.y && this->rect.x == finishPos.x) this->Dir = dir::NONE;
 
-    // Обновляем координаты игрока в соответствии с направлением
     switch (this->Dir) {
         case dir::TOP_LEFT:
             this->rect.x -= speed * delta;

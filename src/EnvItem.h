@@ -1,7 +1,7 @@
 #pragma once
+#include <utility>
+#include <vector>
 #include "raylib.h"
-#include "iostream"
-#include "vector"
 
 enum dir{
     RIGHT,
@@ -14,18 +14,6 @@ enum dir{
     BOTTOM_LEFT,
     NONE
 };
-
-// struct EnvItem{
-//     Rectangle rect;
-    
-//     Color color = RED;
-//     bool number;
-//     float updateSpeed = 300;
-//     dir move = dir::NONE;
-// };
-
-// void UpdateObstacles(std::vector <std::pair <EnvItem, Vector2>> &obstacles,
-//  const float &speed, const float &delta, const float &screenWidth, const float &screenHeight, Rectangle &plr/*float time*/);
 
 class EnvItem{
     public:
